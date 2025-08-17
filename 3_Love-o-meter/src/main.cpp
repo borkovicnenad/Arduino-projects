@@ -5,6 +5,8 @@ const float baselineTemp = 35.0;
 
 void setup()
 {
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
   Serial.begin(9600);
 
   for (int i = 0; i < 5; i++)
@@ -33,7 +35,6 @@ void loop()
   Serial.print("Temperature: ");
   Serial.println(temperature, 1);
   Serial.println();
-
 
   if (temperature < 34)
   {
